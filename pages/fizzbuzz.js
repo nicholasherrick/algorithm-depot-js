@@ -5,7 +5,11 @@ import Highlight from 'react-highlight';
 
 export default function Fizzbuzz() {
   const [number, setNumber] = useState(null);
-  const solution = fizzBuzz.toString();
+  const [solution, setSolution] = useState(null);
+
+  useEffect(() => {
+    setSolution(fizzBuzz.toString());
+  }, []);
 
   const handleChange = e => {
     setNumber(e.target.value);
@@ -21,6 +25,7 @@ export default function Fizzbuzz() {
           both, print "FizzBuzz"
         </p>
         <h2>Solution:</h2>
+        {/* <Highlight className='javascript'>{`${solution}`}</Highlight> */}
         <Highlight className='javascript'>{`${solution}`}</Highlight>
         <label htmlFor='number'>Enter a number</label>
         <input type='text' onChange={handleChange} maxLength='4' />
