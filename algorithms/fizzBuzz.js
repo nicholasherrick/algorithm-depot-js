@@ -1,19 +1,19 @@
-export default function fizzBuzz(n) {
-  let a = [];
-  for (let i = 1; i <= n; i++) {
+export default function fizzBuzz(number) {
+  let array = [];
+  for (let i = 1; i <= number; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
-      a.push('FizzBuzz');
+      array.push('FizzBuzz');
       continue;
     }
     if (i % 3 === 0) {
-      a.push('Fizz');
+      array.push('Fizz');
       continue;
     }
     if (i % 5 === 0) {
-      a.push('Buzz');
+      array.push('Buzz');
       continue;
     }
-    a.push(i.toString());
+    array.push(i.toString());
   }
-  return a;
+  return array;
 }

@@ -1,9 +1,11 @@
 import Layout from '../components/Layout';
 import fizzBuzz from '../algorithms/fizzBuzz';
 import { useState, useEffect } from 'react';
+import Highlight from 'react-highlight';
 
 export default function Fizzbuzz() {
   const [number, setNumber] = useState(null);
+  const solution = fizzBuzz.toString();
 
   const handleChange = e => {
     setNumber(e.target.value);
@@ -11,8 +13,6 @@ export default function Fizzbuzz() {
   return (
     <Layout title='Fizz Buzz' header='Fizz Buzz'>
       <div className='fizzbuzz'>
-        <label htmlFor='number'>Enter a number</label>
-        <input type='text' onChange={handleChange} />
         <h2>Description:</h2>
         <p>
           Given an integer, return an array of numbers counting up to that
@@ -20,8 +20,12 @@ export default function Fizzbuzz() {
           number divisble by 5, print "Buzz", and for every number divisble by
           both, print "FizzBuzz"
         </p>
+        <h2>Solution:</h2>
+        <Highlight className='javascript'>{`${solution}`}</Highlight>
+        <label htmlFor='number'>Enter a number</label>
+        <input type='text' onChange={handleChange} maxLength='4' />
         <h2>Result:</h2>
-        <p>{fizzBuzz(number).toString().replace(/,/g, ', ')}</p>
+        <p>[ {fizzBuzz(number).toString().replace(/,/g, ', ')} ]</p>
       </div>
     </Layout>
   );
