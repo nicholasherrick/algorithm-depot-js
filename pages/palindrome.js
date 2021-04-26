@@ -21,7 +21,7 @@ export default function Fizzbuzz() {
         <h2>Solution:</h2>
         <Highlight className='javascript'>{`${palindromeString}`}</Highlight>
         <label htmlFor='number'>Enter text</label>
-        <input type='text' onChange={handleChange} maxLength='4' />
+        <input type='text' onChange={handleChange} maxLength='14' />
         <h2>Result:</h2>
         <p>
           {string ? palindrome(string).toString().replace(/,/g, ', ') : null}
