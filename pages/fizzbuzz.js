@@ -21,12 +21,13 @@ export default function Fizzbuzz() {
           both, print "FizzBuzz"
         </p>
         <h2>Solution:</h2>
-        {/* <Highlight className='javascript'>{`${solution}`}</Highlight> */}
         <Highlight className='javascript'>{`${fizzBuzzString}`}</Highlight>
         <label htmlFor='number'>Enter a number</label>
         <input type='number' onChange={handleChange} maxLength='4' />
         <h2>Result:</h2>
-        <p>[ {fizzBuzz(number).toString().replace(/,/g, ', ')} ]</p>
+        <p>
+          [ {number ? fizzBuzz(number).toString().replace(/,/g, ', ') : null} ]
+        </p>
       </div>
     </Layout>
   );

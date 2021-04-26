@@ -6,9 +6,14 @@ export default function Navbar() {
       <li>
         <Link href='/'>Algorithm Depot</Link>
       </li>
-      <li>
-        <Link href='/fizzbuzz'>Fizz Buzz</Link>
-      </li>
+      <div className='problems'>
+        <li>
+          <Link href='/fizzbuzz'>Fizz Buzz</Link>
+        </li>
+        <li>
+          <Link href='/palindrome'>Palindrome</Link>
+        </li>
+      </div>
     </ul>
   );
 }

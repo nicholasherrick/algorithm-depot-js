@@ -17,3 +17,9 @@ export const fizzBuzzString = `function fizzBuzz(number) {
   }
   return array;
 }`;
+
+export const palindromeString = `palindrome(stringOrInteger) {
+  const reversed = stringOrInteger.toString().split('').reverse().join('');
+  if (x == reversed) return true;
+  return false;
+}`;
