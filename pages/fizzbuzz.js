@@ -28,7 +28,7 @@ export default function Fizzbuzz() {
         {/* <Highlight className='javascript'>{`${solution}`}</Highlight> */}
         <Highlight className='javascript'>{`${solution}`}</Highlight>
         <label htmlFor='number'>Enter a number</label>
-        <input type='text' onChange={handleChange} maxLength='4' />
+        <input type='number' onChange={handleChange} maxLength='4' />
         <h2>Result:</h2>
         <p>[ {fizzBuzz(number).toString().replace(/,/g, ', ')} ]</p>
       </div>
