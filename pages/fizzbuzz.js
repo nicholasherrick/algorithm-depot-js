@@ -1,15 +1,11 @@
 import Layout from '../components/Layout';
 import fizzBuzz from '../algorithms/fizzBuzz';
-import { useState, useEffect } from 'react';
+import { fizzBuzzString } from '../algorithms';
+import { useState } from 'react';
 import Highlight from 'react-highlight';
 
 export default function Fizzbuzz() {
   const [number, setNumber] = useState(null);
-  const [solution, setSolution] = useState(null);
-
-  useEffect(() => {
-    setSolution(fizzBuzz.toString());
-  }, []);
 
   const handleChange = e => {
     setNumber(e.target.value);
@@ -26,7 +22,7 @@ export default function Fizzbuzz() {
         </p>
         <h2>Solution:</h2>
         {/* <Highlight className='javascript'>{`${solution}`}</Highlight> */}
-        <Highlight className='javascript'>{`${solution}`}</Highlight>
+        <Highlight className='javascript'>{`${fizzBuzzString}`}</Highlight>
         <label htmlFor='number'>Enter a number</label>
         <input type='number' onChange={handleChange} maxLength='4' />
         <h2>Result:</h2>
